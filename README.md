@@ -2,7 +2,7 @@
 
 > **Restored & Enhanced Enterprise Edition**  
 > Tailored for GitHub User: [BongominRonald](https://github.com/BongominRonald)  
-> Repository: [https://github.com/BongominRonald/Agrovia](https://github.com/BongominRonald/Agrovia)  
+> Repository: [https://github.com/BongominRonald/Agrovia-](https://github.com/BongominRonald/Agrovia-)  
 > Status: **100% Unlocked • 0 Dead Links • Production Ready**
 
 ---
@@ -117,7 +117,7 @@ D:\Templates\Agrovia\
 ### Option 1: One-Click Windows Push Script (Recommended)
 Double-click `setup-and-push.bat` (or right-click `setup-and-push.ps1` and select **Run with PowerShell**). The script will automatically:
 1. Initialize the local Git repository on branch `main`.
-2. Link your remote repository to `https://github.com/BongominRonald/Agrovia.git`.
+2. Link your remote repository to `https://github.com/BongominRonald/Agrovia-.git`.
 3. Stage all 17 HTML pages, CSS, JS, PHP, and library assets.
 4. Create an enterprise release commit.
 5. Push everything to GitHub.
@@ -130,13 +130,13 @@ Open your terminal in `D:\Templates\Agrovia` and run:
 ```cmd
 cd D:\Templates\Agrovia
 git init -b main
-git remote add origin https://github.com/BongominRonald/Agrovia.git
+git remote add origin https://github.com/BongominRonald/Agrovia-.git
 git add .
 git commit -m "feat: complete enterprise Agrovia organic agriculture platform with all premium features, interactive components, and AJAX handlers"
 git push -u origin main
 ```
 
-*(If `origin` already exists, run `git remote set-url origin https://github.com/BongominRonald/Agrovia.git` before pushing).*
+*(If `origin` already exists, run `git remote set-url origin https://github.com/BongominRonald/Agrovia-.git` before pushing).*
 
 ---
 

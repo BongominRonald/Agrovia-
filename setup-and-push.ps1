@@ -1,7 +1,7 @@
 <#
 .SYNOPSIS
     Agrovia Organic Farms - Git Auto-Setup & GitHub Push Script
-    Target Repository: https://github.com/BongominRonald/Agrovia
+    Target Repository: https://github.com/BongominRonald/Agrovia-
 #>
 
 Set-Location -Path $PSScriptRoot
@@ -9,7 +9,7 @@ Set-Location -Path $PSScriptRoot
 Write-Host "===============================================================================" -ForegroundColor Green
 Write-Host "       Agrovia Organic Farms - Git Initialization and GitHub Auto-Push" -ForegroundColor Cyan
 Write-Host "                Target Account: github.com/BongominRonald" -ForegroundColor Yellow
-Write-Host "                Target Repo:    github.com/BongominRonald/Agrovia" -ForegroundColor Yellow
+Write-Host "                Target Repo:    github.com/BongominRonald/Agrovia-" -ForegroundColor Yellow
 Write-Host "===============================================================================" -ForegroundColor Green
 Write-Host ""
 
@@ -37,11 +37,11 @@ if (-not (Test-Path ".git")) {
 # Configure Remote Origin
 $remoteCheck = git remote get-url origin 2>$null
 if ($LASTEXITCODE -ne 0) {
-    Write-Host "[*] Adding remote origin (https://github.com/BongominRonald/Agrovia.git)..." -ForegroundColor Cyan
-    git remote add origin https://github.com/BongominRonald/Agrovia.git
+    Write-Host "[*] Adding remote origin (https://github.com/BongominRonald/Agrovia-.git)..." -ForegroundColor Cyan
+    git remote add origin https://github.com/BongominRonald/Agrovia-.git
 } else {
-    Write-Host "[*] Setting remote origin URL to https://github.com/BongominRonald/Agrovia.git..." -ForegroundColor Cyan
-    git remote set-url origin https://github.com/BongominRonald/Agrovia.git
+    Write-Host "[*] Setting remote origin URL to https://github.com/BongominRonald/Agrovia-.git..." -ForegroundColor Cyan
+    git remote set-url origin https://github.com/BongominRonald/Agrovia-.git
 }
 
 # Stage files
@@ -54,32 +54,32 @@ git commit -m "feat: complete enterprise Agrovia organic agriculture platform wi
 
 # Push to GitHub
 Write-Host ""
-Write-Host "[*] Pushing to GitHub (https://github.com/BongominRonald/Agrovia.git)..." -ForegroundColor Cyan
+Write-Host "[*] Pushing to GitHub (https://github.com/BongominRonald/Agrovia-.git)..." -ForegroundColor Cyan
 git push -u origin main
 
 if ($LASTEXITCODE -eq 0) {
     Write-Host ""
     Write-Host "===============================================================================" -ForegroundColor Green
     Write-Host "[SUCCESS] Agrovia platform successfully pushed to GitHub!" -ForegroundColor Green
-    Write-Host "Repository URL: https://github.com/BongominRonald/Agrovia" -ForegroundColor Cyan
+    Write-Host "Repository URL: https://github.com/BongominRonald/Agrovia-" -ForegroundColor Cyan
     Write-Host "===============================================================================" -ForegroundColor Green
 } else {
     Write-Host ""
     Write-Host "[!] HTTPS push encountered an error. Attempting SSH fallback..." -ForegroundColor Yellow
-    git remote set-url origin git@github.com:BongominRonald/Agrovia.git
+    git remote set-url origin git@github.com:BongominRonald/Agrovia-.git
     git push -u origin main
     
     if ($LASTEXITCODE -eq 0) {
         Write-Host ""
         Write-Host "===============================================================================" -ForegroundColor Green
         Write-Host "[SUCCESS] Agrovia platform successfully pushed via SSH!" -ForegroundColor Green
-        Write-Host "Repository URL: https://github.com/BongominRonald/Agrovia" -ForegroundColor Cyan
+        Write-Host "Repository URL: https://github.com/BongominRonald/Agrovia-" -ForegroundColor Cyan
         Write-Host "===============================================================================" -ForegroundColor Green
     } else {
         Write-Host ""
         Write-Host "[!] Push failed. Please check:" -ForegroundColor Red
-        Write-Host "  1. The repo 'Agrovia' is created on https://github.com/BongominRonald/Agrovia" -ForegroundColor Yellow
-        Write-Host "  2. You have permission to push to BongominRonald/Agrovia" -ForegroundColor Yellow
+        Write-Host "  1. The repo 'Agrovia-' is created on https://github.com/BongominRonald/Agrovia-" -ForegroundColor Yellow
+        Write-Host "  2. You have permission to push to BongominRonald/Agrovia-" -ForegroundColor Yellow
         Write-Host "  3. Your GitHub credentials / Personal Access Token or SSH keys are valid." -ForegroundColor Yellow
     }
 }
