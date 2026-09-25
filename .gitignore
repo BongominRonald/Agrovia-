@@ -1,0 +1,23 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE and Editor Files
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+*~
+
+# Temporary & Cache Files
+*.tmp
+*.bak
+*.cache
+
+# Keep mail logs folder tracked with .gitkeep
+mail/logs/*
+!mail/logs/.gitkeep
